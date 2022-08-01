@@ -1,0 +1,45 @@
+.main1 {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.settings {
+    font-size: 15px;
+    margin-top: 10px;
+    width: 210px;
+    height: 80px;
+    background-color: rgb(22, 85, 65);
+    border: 2px solid green;
+    border-radius: 10px;
+    color: #d4e7de;
+}
+
+.number1 {
+    display: inline-block;
+    width: 90px;
+    margin-left: 20px;
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.number2 {
+    display: inline-block;
+    width: 90px;
+    margin-left: 20px;
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.error_number {
+    color: blue;
+    background-color: #f17676;
+    display: inline-block;
+    width: 90px;
+    margin-left: 20px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
