@@ -37,7 +37,8 @@ export const Buttons = (props: ButtonPropsType) => {
                     <button
                         className={s.set}
                         onClick={onSetClick}
-                        disabled={props.startValue < props.min || props.maxValue > props.max}
+                        disabled={props.startValue < props.min || props.maxValue >= props.max ||
+                            props.startValue === props.maxValue || props.startValue > props.maxValue}
                     >set
                     </button>
                 </div>
@@ -49,7 +50,7 @@ export const Buttons = (props: ButtonPropsType) => {
                         className={s.inc}
                         onClick={onIncClick}
                         disabled={
-                            props.num > props.maxValue ||
+                            props.num >= props.maxValue ||
                              props.num > props.max ||
                             props.maxValue > props.max
                             || props.startValue < props.min}

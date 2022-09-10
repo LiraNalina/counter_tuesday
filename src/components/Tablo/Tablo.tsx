@@ -18,17 +18,20 @@ export const Tablo = (props: ButtonPropsType) => {
 
             <div className={s.tablo}>
 
-                 <span className={props.maxValue <= props.max && props.startValue >= props.min
-                 && props.num <= props.maxValue && props.num >= props.startValue
+                 <span className={props.maxValue < props.max && props.startValue >= props.min
+                 && props.num < props.maxValue
+                 && props.startValue !== props.maxValue && props.startValue < props.maxValue
                      ? s.digit : s.error_number}>
 
                     {
+                        (props.startValue > props.maxValue) || props.startValue === props.maxValue &&
+                        (props.startValue && props.maxValue !== 0)? ("incorrect value") :
                         props.startValue >= props.min && props.maxValue < props.max
-                        && props.startValue <= props.maxValue
                         && props.maxValue > props.min
-                        && props.startValue < props.max && props.num < props.max ?
-                            props.num : ("enter values and press 'set'")
+                        && props.startValue < props.max && props.num < props.max
+                            ? props.num : ("enter values and press 'set'")
                     }
+
                 </span>
             </div>
         </div>

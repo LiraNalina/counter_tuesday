@@ -26,7 +26,7 @@ export const Settings = (props: SettingsPropsType) => {
                 <div>start value:
                     <input type="number"
                            value={props.startValue}
-                           className={props.startValue < props.maxValue && props.startValue >= props.min ? s.number2 : s.error_number}
+                           className={props.startValue < props.maxValue && props.startValue >= props.min && props.startValue !== props.maxValue ? s.number2 : s.error_number}
                            onChange={onChangeInputHandler1}
                     /></div>
 
